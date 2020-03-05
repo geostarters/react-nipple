@@ -1,6 +1,6 @@
 {
-  "name": "react-nipple",
-  "version": "1.0.2",
+  "name": "@geostarters/react-nipple",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -20,7 +20,7 @@
     "autobind-decorator": "^2.1.0",
     "classnames": "^2.2.6",
     "lodash.isequal": "^4.5.0",
-    "nipplejs": "^0.7.1"
+    "@geostarters/nipplejs": "^0.9.0"
   },
   "devDependencies": {
     "@loopmode/babel6-base": "^0.0.6",

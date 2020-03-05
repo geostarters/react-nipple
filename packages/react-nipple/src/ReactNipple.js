@@ -1,4 +1,4 @@
-import nipplejs from 'nipplejs';
+import nipplejs from '@geostarters/nipplejs';
 import autobind from 'autobind-decorator';
 import isEqual from 'lodash.isequal';
 import PropTypes from 'prop-types';
@@ -48,7 +48,8 @@ export default class ReactNipple extends Component {
                 mode: PropTypes.string, // 'dynamic', 'static' or 'semi'
                 restJoystick: PropTypes.bool,
                 restOpacity: PropTypes.number, // opacity when not 'dynamic' and rested
-                catchDistance: PropTypes.number
+                catchDistance: PropTypes.number,
+                frontPosition: PropTypes.object,
             }),
             static: PropTypes.bool,
             onStart: PropTypes.func,
@@ -92,7 +93,7 @@ export default class ReactNipple extends Component {
     componentDidUpdate(prevProps) {
         if (!isEqual(prevProps.options, this.props.options)) {
             this.destroyJoystick();
-            this.createJoystick();
+            this.createJoystick(this.props);
         }
     }
 

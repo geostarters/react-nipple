@@ -13,7 +13,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _desc, _value, _class;
 
-var _nipplejs = require('nipplejs');
+var _nipplejs = require('@geostarters/nipplejs');
 
 var _nipplejs2 = _interopRequireDefault(_nipplejs);
 
@@ -93,7 +93,7 @@ var ReactNipple = (_class = function (_Component) {
         value: function componentDidUpdate(prevProps) {
             if (!(0, _lodash2.default)(prevProps.options, this.props.options)) {
                 this.destroyJoystick();
-                this.createJoystick();
+                this.createJoystick(this.props);
             }
         }
     }, {
@@ -265,7 +265,8 @@ var ReactNipple = (_class = function (_Component) {
                     mode: _propTypes2.default.string, // 'dynamic', 'static' or 'semi'
                     restJoystick: _propTypes2.default.bool,
                     restOpacity: _propTypes2.default.number, // opacity when not 'dynamic' and rested
-                    catchDistance: _propTypes2.default.number
+                    catchDistance: _propTypes2.default.number,
+                    frontPosition: _propTypes2.default.object
                 }),
                 static: _propTypes2.default.bool,
                 onStart: _propTypes2.default.func,
