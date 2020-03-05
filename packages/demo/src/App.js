@@ -31,12 +31,13 @@ class App extends Component {
           />
           <ReactNippleExample
             title="Static 2"
-            width={250}
-            height={250}
+            width={150}
+            height={150}
             options={{
               mode: "static",
               color: "blue",
-              position: { top: "50%", left: "50%" }
+              position: { top: "50%", left: "50%" },
+              frontPosition: {x: 75, y: -35}
             }}
           />
         </div>
